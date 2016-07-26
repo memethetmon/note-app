@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Notes</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<!-- including angular-local-storage -->
+		<script src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body ng-app="notes_app">
+		<div id="container" ng-controller="NoteController">
+			<form id="add-box" ng-submit="createNote()">
+				<input type="text" ng-model="new_note" placeholder=" + Add a note..." />
+			</form>
+			<div id="allNotes" ng-repeat="note in notes track by $index">
+				<p ng-hide="edit" ng-click="edit=true">{{note}}</p>
+				<!-- only show when click on the note field -->
+				<div ng-show="edit">
+					<form ng-submit="edit=false; editNote($index, updated_note)">
+						<input type="text" ng-model="updated_note" placeholder={{note}} />
+					</form>
+					<button ng-click="updated_note = null; edit=false">Cancel</button> 
+					<button ng-click="removeNote($index); edit = false">Delete</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+/*** For mobile first responsive web ***/
+/**** input box ****/
+#container #add-box input, #container #allNotes input {
+  width: 90%;
+  height: 25px;
+  left: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #FDFDFD; }
+
+/**** button style ****/
+#container #allNotes button {
+  width: 70px;
+  height: 40px;
+  background-color: #EF4D2F;
+  border-radius: 5px;
+  font: 1.5em;
+  color: #FDFDFD; }
+
+* {
+  margin: 0 auto;
+  padding: 0 auto; }
+
+body {
+  background-color: #FDFDFD; }
+
+#container {
+  width: 100%;
+  padding: 10px; }
+  #container #add-box, #container #allNotes {
+    width: 97%; }
+    #container #add-box input, #container #allNotes input {
+      background-color: #80C342; }
+    #container #add-box ::-webkit-input-placeholder, #container #allNotes ::-webkit-input-placeholder {
+      color: #FDFDFD; }
+    #container #add-box :-moz-placeholder, #container #allNotes :-moz-placeholder {
+      color: #FDFDFD;
+      opacity: 1; }
+    #container #add-box ::-moz-placeholder, #container #allNotes ::-moz-placeholder {
+      color: #FDFDFD;
+      opacity: 1; }
+    #container #add-box :-ms-input-placeholder, #container #allNotes :-ms-input-placeholder {
+      color: #FDFDFD; }
+  #container #allNotes p {
+    width: 91%;
+    background-color: #0FB1B0;
+    font: 1em;
+    color: #FDFDFD;
+    padding: 8px;
+    margin: 10px 0px;
+    overflow: scroll;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=index.css.map */

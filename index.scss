@@ -1,0 +1,82 @@
+/*** For mobile first responsive web ***/
+$white: #FDFDFD;
+$input-bg-color: #0FB1B0;
+$button-color: #EF4D2F;
+$rounded-border: 5px;
+
+/**** input box ****/
+%input-field {
+	width: 90%;
+	height: 25px;
+	left: 50%;
+	padding: 10px;
+	margin-top: 10px;
+	font-size: 1rem;
+	border-radius: $rounded-border;
+	color: $white;
+}
+
+/**** button style ****/
+%button {
+	width: 70px;
+	height: 40px;
+	background-color: $button-color;
+	border-radius: $rounded-border;
+	font: 1.5em;
+	color: $white;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+body {
+	background-color: $white;
+}
+
+#container {
+	width: 100%;
+	padding: 10px;
+
+	#add-box, #allNotes {
+		width: 97%;
+
+		input {
+			background-color: #80C342;
+			@extend %input-field;
+		}
+			::-webkit-input-placeholder {
+				color: $white;
+			}
+			// firefox's placeholeder appears to be defaulting with a reducted opacity, so need to use 1 here
+			:-moz-placeholder {
+				color: $white;
+				opacity: 1;
+			}
+			::-moz-placeholder {
+				color: $white;
+				opacity: 1;
+			}
+			:-ms-input-placeholder {
+				color: $white;
+			}
+	}
+
+	#allNotes {
+		p {
+			width: 91%; 
+			background-color: $input-bg-color;
+			font: 1em;
+			color: $white;
+			padding: 8px;
+			margin: 10px 0px;
+			overflow: scroll;
+			border-radius: $rounded-border;
+		}
+
+		button {
+			@extend %button;
+		}
+	}
+}
