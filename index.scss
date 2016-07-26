@@ -42,10 +42,11 @@ body {
 	#add-box, #allNotes {
 		width: 97%;
 
-		input {
+		#add-field {
 			background-color: #80C342;
 			@extend %input-field;
 		}
+
 			::-webkit-input-placeholder {
 				color: $white;
 			}
@@ -74,6 +75,26 @@ body {
 			overflow: scroll;
 			border-radius: $rounded-border;
 		}
+		input {
+			background-color: $input-bg-color;
+			@extend %input-field;
+		}
+
+			::-webkit-input-placeholder {
+				color: $white;
+			}
+			// firefox's placeholeder appears to be defaulting with a reducted opacity, so need to use 1 here
+			:-moz-placeholder {
+				color: $white;
+				opacity: 1;
+			}
+			::-moz-placeholder {
+				color: $white;
+				opacity: 1;
+			}
+			:-ms-input-placeholder {
+				color: $white;
+			}
 
 		button {
 			@extend %button;

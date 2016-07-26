@@ -13,7 +13,7 @@
 	<body ng-app="notes_app">
 		<div id="container" ng-controller="NoteController">
 			<form id="add-box" ng-submit="createNote()">
-				<input type="text" ng-model="new_note" placeholder=" + Add a note..." />
+				<input id="add-field" type="text" ng-model="new_note" placeholder=" + Add a note..." />
 			</form>
 			<div id="allNotes" ng-repeat="note in notes track by $index">
 				<p ng-hide="edit" ng-click="edit=true">{{note}}</p>

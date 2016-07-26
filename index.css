@@ -1,6 +1,6 @@
 /*** For mobile first responsive web ***/
 /**** input box ****/
-#container #add-box input, #container #allNotes input {
+#container #add-box #add-field, #container #allNotes #add-field, #container #allNotes input {
   width: 90%;
   height: 25px;
   left: 50%;
@@ -31,7 +31,7 @@ body {
   padding: 10px; }
   #container #add-box, #container #allNotes {
     width: 97%; }
-    #container #add-box input, #container #allNotes input {
+    #container #add-box #add-field, #container #allNotes #add-field {
       background-color: #80C342; }
     #container #add-box ::-webkit-input-placeholder, #container #allNotes ::-webkit-input-placeholder {
       color: #FDFDFD; }
@@ -52,5 +52,17 @@ body {
     margin: 10px 0px;
     overflow: scroll;
     border-radius: 5px; }
+  #container #allNotes input {
+    background-color: #0FB1B0; }
+  #container #allNotes ::-webkit-input-placeholder {
+    color: #FDFDFD; }
+  #container #allNotes :-moz-placeholder {
+    color: #FDFDFD;
+    opacity: 1; }
+  #container #allNotes ::-moz-placeholder {
+    color: #FDFDFD;
+    opacity: 1; }
+  #container #allNotes :-ms-input-placeholder {
+    color: #FDFDFD; }
 
 /*# sourceMappingURL=index.css.map */
